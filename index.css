@@ -1,0 +1,59 @@
+header{
+    text-align: center;
+    background-color: blue;
+    color: red;
+    padding: 50px;
+    filter: contrast(90%);
+    filter: brightness(50%);
+    font-size: 20px;
+}
+.Linear_diff h2{
+    text-align: center;
+    font-family: cursive;
+    margin: 40px;
+}
+.form{
+    width: 50%;
+    padding: 5%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 222, 236);
+}
+input{
+    width: 30%;
+    font-size: 20px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(247, 248, 248);
+}
+label{
+    color: blue;
+    margin: 10px;
+    font-size: 15px;
+    text-shadow: 2px 2px 5px 2px solid white ;
+}
+button{
+    width: 70%;
+    margin: auto;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(6, 6, 97);
+    color: white;
+    outline: none;
+    border: none;
+}
+.output{
+    width: 50%;
+    margin: auto;
+    color: rgb(5, 5, 99);
+    font-size: 15px;
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgb(190, 224, 253);
+    padding: 30px;
+    box-sizing: content-box;
+
+}
