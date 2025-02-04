@@ -1,0 +1,12 @@
+{
+  "name": "prjectt",
+  "version": "1.0.0",
+  "description": "a calculator for calculating miscellenous mathematical problems",
+  "default": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html  --dist-dir ./dist"
+  },
+  "author": "victory",
+  "license": "ISC"
+}

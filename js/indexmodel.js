@@ -182,7 +182,24 @@ class Simult {
         if (secondy === 0 || secondx === 0) {
             outputsimult.innerHTML = ''; 
         }else{
-            outputsimult.innerHTML = `X = ${this.x} <br> Y = ${this.y}`;
+            const textStore = [];
+        let i = 0;
+        function animate(text){
+            if (i < text.length) {
+                let show = text.split('')[i];
+                textStore.push(show);
+                i++ 
+                return textStore.join('');
+            }
+            else{
+                clearInterval(interval)
+            }
+            return textStore.join('');
+        }
+        const interval = setInterval(() => {
+            outputsimult.innerHTML =  animate(`X = ${this.x} <br> Y = ${this.y}`)
+        }, 50);  
+            
         }
 
         this.a.value = '';
