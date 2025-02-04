@@ -5,13 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unknown</title>
     <link rel="stylesheet" href="index.css">
-    <script defer src="js/indexview.js"></script>
+    <script type="module" defer src="js/indexview.js"></script>
 
 </head>
 <body>
+<section class="sect2">
     <header><h1>MATHS HELP</h1></header>
+    <div class="tableshow">
+        <div class="open show">
+            |||
+        </div>
+        <div class="close noshow">
+            X
+        </div>
+    </div>
+    <div class="table noshow">
+
+        <table>
+            <tr>
+                <th>y = f(x)</th>
+                <th>dy/dx</th>
+            </tr>
+            <tr>
+                <td>x<sup>n</sup></td>
+                <td>nx<sup>n-1</sup></td>
+            </tr>
+            <tr>
+                <td>e<sup>x</sup></td>
+                <td>e<sup>x</sup></td>
+            </tr>
+            <tr>
+                <td>e<sup>kx</sup></td>
+                <td>ke<sup>kx</sup></td>
+            </tr>
+            <tr>
+                <td>a<sup>x</sup></td>
+                <td>a<sup>x</sup>.in a</td>
+            </tr>
+            <tr>
+                <td>inx</td>
+                <td>1/x</td>
+            </tr>
+            <tr>
+                <td>log<sub>a</sub>x</td>
+                <td>1/x.ina</td>
+            </tr>
+            <tr>
+                <td>sinx</td>
+                <td>cosx</td>
+            </tr>
+            <tr>
+                <td>cosx</td>
+                <td>-sinx</td>
+            </tr>
+            <tr>
+                <td>tanx</td>
+                <td>sec<sup>2</sup>x</td>
+            </tr>
+            <tr>
+                <td>cotx</td>
+                <td>-cosec<sup>2</sup>x</td>
+            </tr>
+            <tr>
+                <td>secx</td>
+                <td>secx.tanx</td>
+            </tr>
+            <tr>
+                <td>cosecx</td>
+                <td>-cosecx.cotx</td>
+            </tr>
+            <tr>
+                <td>sinhx</td>
+                <td>coshx</td>
+            </tr>
+            <tr>
+                <td>coshx</td>
+                <td>sinhx</td>
+            </tr>
+        </table>
+    </div>
+
+
     <div class="Linear_diff">
-        <h2>DIFFERENTIATION(Linear)</h2>
+        <h2 class="title1">DIFFERENTIATION(Linear) </h2>
         <div class="form">
             <label for="coef_">coef_</label> 
             <input type="number" name="coef_" id="coef_" required><br>
@@ -24,6 +100,48 @@
 
     </div> 
 
-    <h1 class="output"></h1>
+    <div class="output"></div>
+
+
+    <div class="Linear_int">
+        <h2 class ='title2'>INTEGRATION(Linear)</h2>
+        <div class="form">
+            <label for="coef_">coef_</label> 
+            <input type="number" name="coef_" id="coefint_" required><br>
+            <label for="variable">variable</label> 
+            <input type="text" name="variable" id="variableint" required><br>
+            <label for="power">power</label> 
+            <input type="number" name="power" id="powerint" required> <br>
+            <button type="submit" class="submit_int">submit</button>
+        </div>
+
+    </div> 
+
+    <div class="outputint"></div>
+
+
+    <div class="Linear_simult">
+        <h2 class ='title3'>SIMULTENEOUS EQUATION aX +  bY = C, dX + eY = F </h2>
+        <div>
+            <form>
+                <input type="number" placeholder="a" id="a" required><br>
+                <input type="number" placeholder="b" id="b" required><br>
+                <input type="number" placeholder="c" id="c" required> <br> 
+                <input type="number" placeholder="d" id="d" required><br>
+                <input type="number" placeholder="e" id="e" required><br>
+                <input type="number" placeholder="f" id="f" required> <br>
+                <button type="submit" class="submit_simult">submit</button>
+            </form>
+        </div>
+
+    </div> 
+
+    <div class="outputsimult"></div>
+
+    <div class="scrolldown">
+        >
+    </div>
+</section>
+
 </body>
 </html>
