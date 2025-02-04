@@ -15,12 +15,13 @@ header:hover{
     font-size: 21px;
 
 }
-.Linear_diff h2, .Linear_int h2, .Linear_simult h2{
+.Linear_diff h2, .Linear_int h2, .Linear_simult h2,.Linear_Quad h2{
     text-align: center;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 40px;
+    font-size: 15px;
 }
-.Linear_diff, .Linear_int{
+.Linear_diff, .Linear_Quad{
     transition: 2s;
 }
 .Linear_simult form{
@@ -33,11 +34,11 @@ header:hover{
     padding: 5%;
     margin: auto;
 }
-.Linear_simult input{
+.Linear_simult input, .Linear_Quad input{
     margin-bottom: 10px;
 }
 
-.form{
+.form, .Linear_Quad form{
     width: 50%;
     padding: 5%;
     margin: auto;
@@ -75,7 +76,7 @@ label{
     font-size: 15px;
     text-shadow: 2px 2px 5px 2px solid white ;
 }
-button{
+button,.mode{
     width: 70%;
     margin: auto;
     font-size: 15px;
@@ -86,7 +87,8 @@ button{
     outline: none;
     border: none;
 }
-.output, .outputint, .outputsimult{
+
+.output, .outputint, .outputsimult, .outputQuad{
     max-width: 50%;
     margin: auto;
     color: rgb(5, 5, 99);
@@ -110,6 +112,9 @@ table{
 tr:nth-child(odd){
     background-color: rgb(212, 214, 248);
 }
+tr:nth-child(even){
+    background-color: white;
+}
 th,td{
     padding: 20px;
 }
@@ -126,16 +131,31 @@ th,td{
     background-color: rgb(2, 7, 44);
     color: white;
     font-weight: 900;
-    border-radius: 10px;   
+    border-radius: 10px;
+    padding: 10px;
 }
-.open:hover, .close:hover,button:hover{
+.open:hover, .close:hover,button:hover, .mode:hover{
     background-color: rgb(26, 35, 100);
     filter: saturate(20%);
     filter: brightness(80%);
     transition: 0.5s ease-out;
     border-radius: 15px;
 }
-
+.mode{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.lightmode{
+    background-color: rgb(6, 6, 97);
+    color: white;
+}
+.darkmode{
+    background-color: white;
+    color: black;
+}
 .show{
     display: block;
 }

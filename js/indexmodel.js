@@ -3,6 +3,7 @@
 import { output } from "./indexview.js";
 import { outputint } from "./indexview.js";
 import { outputsimult } from "./indexview.js";
+import { outputQuad } from "./indexview.js";
 
 
 ///////////////////////////////
@@ -216,3 +217,72 @@ class Simult {
 ////////////////////////
 
 export const simult  = new Simult();
+
+
+/////////////////////////////////////////
+//class quadratic equation//////////////////////////////////
+class Quad {
+    constructor() {
+        //calling the initials to access the Dom Elements
+        this.a = a_;
+        this.b = b_;
+        this.c = c_;
+        this.a_values;
+        this.b_values;
+        this.c_values;
+
+        //this.equation;
+        this.x1;
+        this.x2;
+               
+    }
+ //////////////////////////////
+ //class prototype that helps in quadratic equation
+    _quad(){
+        this.a_values = Number(this.a.value);
+        this.b_values = Number(this.b.value);
+        this.c_values = Number(this.c.value);
+
+        let firstx = (-(this.b_values)) + Math.sqrt((this.b_values*this.b_values)-(4*this.a_values*this.c_values));
+        let secondx = (-(this.b_values)) - Math.sqrt((this.b_values*this.b_values)-(4*this.a_values*this.c_values));
+        let denominatorx = 2 * this.a_values;
+        console.log(Math.sqrt(-4));
+        this.x1 = firstx/denominatorx;
+        this.x2 = secondx/denominatorx;
+
+        if (denominatorx === 0) {
+            outputQuad.innerHTML = ''; 
+
+        }else{
+            const textStore = [];
+            let i = 0;
+
+        function animate(text){
+            if (i < text.length) {
+                let show = text.split('')[i];
+                textStore.push(show);
+                i++ 
+                return textStore.join('');
+            }
+            else{
+                clearInterval(interval)
+            }
+            return textStore.join('');
+        }
+        const interval = setInterval(() => {
+            outputQuad.innerHTML =  animate(`X = ${this.x1} <br> or X = ${this.x2}`)
+        }, 50);  
+            
+        }
+
+        this.a.value = '';
+        this.b.value = '';
+        this.c.value = '';
+
+    }
+/////////////////////////////////////////////////
+}
+
+////////////////////////
+
+export const quad  = new Quad();
