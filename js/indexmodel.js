@@ -286,3 +286,189 @@ class Quad {
 ////////////////////////
 
 export const quad  = new Quad();
+
+
+
+
+/////////////////////////////////////////
+//class calculator//////////////////////////////////
+class Calculator{
+    constructor() {
+        //calling the initials to access the Dom Elements
+        this._1 = _1
+        this._2 = _2
+        this._3 = _3
+        this._x = _x
+        this._4 = _4
+        this._5 = _5
+        this._6 = _6
+        this._divide = _divide
+        this._7 = _7
+        this._8 = _8
+        this._9 = _9
+        this._minus = _minus
+        this._ac = _ac
+        this._0 = _0
+        this._equal = _equal
+        this._plus = _plus
+        this._cos = _cos
+        this._sin = _sin
+        this._tan = _tan
+        this._del = _del
+        this._screen = _screen
+        this.state = '';
+        this.dotstate = '';
+        this.value1 = [];
+        this.value2 = [];
+
+        //this.equation;
+        this._calculator()
+               
+    }
+ //////////////////////////////
+ //calculate
+    _calculator(){
+
+        const calculate = (value) =>{
+            if (this.state !== '') {
+                if (this.value2.length < 10) {
+                    this.value2.push(value);
+                    this._screen.textContent = Number(this.value2.join(''))
+                }else{
+                    this._screen.textContent = Number(this.value2.join(''))
+                }
+            }else{
+                if (this.value1.length < 10) {
+                    this.value1.push(value);
+                    this._screen.textContent = Number(this.value1.join(''))
+                }else{
+                    this._screen.textContent = Number(this.value1.join(''))
+                }
+            }
+        };
+
+
+        const add = (value1,value2) =>{
+            this.value1 = Number(value1) + Number(value2)
+            return this.value1
+        }
+        const divide = (value1,value2) =>{
+            this.value1 = Number(value1) / Number(value2)
+            return this.value1
+        }
+        const multiply = (value1,value2) =>{
+            this.value1 = Number(value1) * Number(value2)
+            return this.value1
+        }
+        const minus = (value1,value2) =>{
+            this.value1 = Number(value1) - Number(value2)
+            return this.value1
+        }
+        ////////////////////////////////
+        this._1.addEventListener('click', () => {
+            calculate('1')
+
+        })
+        this._2.addEventListener('click', () => {
+            calculate('2')
+
+        })
+        this._3.addEventListener('click', () => {
+            calculate('3')
+
+        });
+        this._4.addEventListener('click', () => {
+            calculate('4')
+
+        });
+        this._5.addEventListener('click', () => {
+            calculate('5')
+
+        });
+        this._6.addEventListener('click', () => {
+            calculate('6')
+
+        });
+        this._7.addEventListener('click', () => {
+            calculate('7')
+
+        });
+        this._8.addEventListener('click', () => {
+            calculate('8')
+
+        });
+        this._9.addEventListener('click', () => {
+            calculate('9')
+
+        });
+        this._0.addEventListener('click', () => {
+            calculate('0')
+
+        });
+        this._minus.addEventListener('click', () => {
+            this.state = '-';
+            this._screen.textContent = '';
+            this.dotstate = '';
+
+
+        });
+        this._plus.addEventListener('click', () => {
+            this.state = '+';
+            this._screen.textContent = '';
+            this.dotstate = '';
+
+
+        });
+        this._divide.addEventListener('click', () => {
+            this.state = '/';
+            this._screen.textContent = '';
+            this.dotstate = '';
+         });
+         this._x.addEventListener('click', () => {
+            this.state = '*';
+            this._screen.textContent = '';
+            this.dotstate = '';
+        });
+        this._ac.addEventListener('click', () => {
+            this.value1 = [];
+            this.value2 = [];
+            this._screen.textContent = '0'
+
+        });
+        this._cos.addEventListener('click', () => {
+           
+            if (this.dotstate === '') {
+                calculate('.') 
+            }
+            
+             this.dotstate = '1'
+        });
+        this._del.addEventListener('click', () => {
+            this.value1.pop()
+            this._screen.textContent = Number(this.value1.join(''))
+        });
+        this._equal.addEventListener('click', () => {
+            if (this.state === '-') {
+                this._screen.textContent = minus(this.value1.join(''),this.value2.join(''))
+            }else if (this.state === '/') {
+                this._screen.textContent = divide(this.value1.join(''),this.value2.join(''))
+            }else if (this.state === '+') {
+                this._screen.textContent = add(this.value1.join(''),this.value2.join(''))
+            }else if (this.state === '*') {
+                this._screen.textContent = multiply(this.value1.join(''),this.value2.join(''))
+            }
+            this.value1 = [];
+            this.value2 = [];
+            this.state = '';
+            this.dotstate = '';
+        });
+        
+
+    }
+//////////////////////////////////////////9/////
+}
+
+////////////////////////
+
+export const calculator  = new Calculator();
+

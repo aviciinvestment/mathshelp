@@ -182,7 +182,56 @@ th,td{
     background-color: rgb(106, 59, 247);
     border-radius: 50%;
     transition: 1s;
+}
+.calculator{
+    box-shadow: 2px 10px 13px 2px black;
+    width: 250px;
+    padding: 10px;
+    position: fixed;
+    left: -500px;
+    top: 100px;
+    background-color: white;
+    transition: 1s;
+}
 
+.calculator button{
+    background-color: white;
+    width: 50px;
+    box-shadow: 2px 2px 2px 2px black;
+    padding: 5px;
+    margin: 5px;
+    font-size: 30px;
+    color: black;
+}
+#_screen{
+    box-sizing: border-box;
+    background-color: rgb(182, 182, 223);
+    width: 245px;
+    height: 50px;
+    border: 2px inset rgb(4, 4, 37);
+    font-size: 30px;
+    text-align: right;
+    overflow-x: scroll;
+}
+.calculatoricon{
+    font-size: 50px;
+    position: fixed;
+    top: 30px;
+    left: 0px;
+    cursor: pointer;
+}
+.calculatoricon:hover{
+    font-size: 45px;
+}
+#_del{
+    background-color: red;
+    color: white;
+}
+#_ac{
+    color: red;
+}
+#_sin, #_tan{
+    opacity: 0;
 }
 @keyframes scrollanimate {
     0%{

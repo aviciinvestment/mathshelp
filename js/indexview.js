@@ -3,6 +3,8 @@ import { linear_diff } from "./indexmodel.js"
 import { linear_int } from "./indexmodel.js"
 import { simult } from "./indexmodel.js";
 import { quad } from "./indexmodel.js";
+import { calculator } from "./indexmodel.js";
+
 
 
 const submit_diff = document.querySelector('.submit_diff');
@@ -13,6 +15,8 @@ const Linear_Quad = document.querySelector('.Linear_Quad');
 const submit_Quad = document.querySelector('.submit_Quad')
 const title1 = document.querySelector('.title1');
 const title4 = document.querySelector('.title4')
+const calculators = document.querySelector('.calculator');
+const calculatoricon = document.querySelector('.calculatoricon')
 
 ///////////////////////////////////////////
 ///enabling dark mode
@@ -78,10 +82,12 @@ const table = document.querySelector('.table');
 
 class display{
     constructor(){
+        this.togglestate = true;
         this._toggle();
         this._scrolldown();
         this._textAnimation()
         this._mode()
+        this._togglecalculator()
     }
 //////////////////////////////////////////////////////////////
         _toggle(){
@@ -212,7 +218,22 @@ class display{
 
         }
 
+        _togglecalculator(){
+            const togglefunc =()=>{
+                this.togglestate = !this.togglestate;
+                this.togglestate ? calculators.style.left = '-500px' : calculators.style.left = '0px'
+            }
+            calculatoricon.addEventListener('click', togglefunc)
+            
+
+        }
+
 
  }
 
 const Display = new display()
+
+
+/////////////////////////
+//calling the calculator function
+calculator
